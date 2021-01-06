@@ -30,7 +30,7 @@ app.get('/',function(req, res){
     res.render('index',
     {
         nav,
-        title:'Library'
+        title:'House of Books'
     }
     );
 });
