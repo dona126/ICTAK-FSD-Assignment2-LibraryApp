@@ -13,7 +13,16 @@ signupRouter.get('/', function(req,res){
     }
     );//passed as object
 });
-
+signupRouter.get('/:id', function(req,res){
+    const id=req.params.id;
+    res.render("addpage",
+    {
+        nav,
+        title:'Add new book',
+        
+    }
+    );//passed as object
+});
 return signupRouter;
 }//fn router ends
 

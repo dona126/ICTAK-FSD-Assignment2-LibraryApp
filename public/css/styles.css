@@ -171,9 +171,24 @@ a,a:hover {
   
   background-color:white;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px 1px #efefef;
+  box-shadow: 2px 2px 2px 2px #efefef;
 
-  padding: 35px;
+  padding: 45px;
+  margin-top:35px;
+  margin-bottom:35px;
+  margin-left:75px;
+  margin-right:75px;
+
+  
+}
+
+.addbook{
+  
+  background-color:white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px #efefef;
+
+  padding: 45px;
   margin-top:35px;
   margin-bottom:35px;
   margin-left:75px;
