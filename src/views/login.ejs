@@ -8,12 +8,12 @@
     
     <meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
   </head>
   
 <body>
@@ -33,7 +33,9 @@
         <%for(i=0;i<nav.length; i++){%>
 
           <li>
-          
+            <%if(i==2){%>
+              <%i=i+2;}%> 
+                      
               <a href="<%=nav[i].link%>"><%=nav[i].name%></a> <!-- linking other ejs files -->
           
           </li>
@@ -49,8 +51,8 @@
 <div class="container">
 
 
-        <form class="formClass one" action="/login/addpage"  onsubmit=" return emailValidation();">
-          <h1 class="myText">Log In to Library App</h1>
+        <form class="formClass one"  action="/login/addpage" onsubmit=" return emailValidation();">
+          <h1 class="myText">Log In to add new book</h1>
           <br>
           <div class="form-group">
             <input type="email" class="form-control"  id="email"  placeholder="Email address">
@@ -66,13 +68,14 @@
           </div>
           <!-- <button id="myButton" class="float-left submit-button" >Home</button> -->
           <button id="logIn" type="submit" class="btn btn-primary btn-block ">Log In</button>
+          
+          
           <div class="myText">
-            
-            
           <h1> </h1>
-          <a href="#">Forgotten password?</a>
-          <h1> </h1>
-          <a href="#">Don't have an account?</a> 
+          <a href="#" style="text-align: left;">Forgotten password?</a>
+          <br>
+          <br>
+          <a href="#" style="text-align: right;">Don't have an account?</a> 
           </div>
         </form> 
          
@@ -103,7 +106,7 @@
 </footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/login.js"></script>
 	</body>
 </html>

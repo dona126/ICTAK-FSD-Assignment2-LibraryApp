@@ -14,10 +14,9 @@ loginRouter.get('/', function(req,res){
     );//passed as object
 });
 loginRouter.get('/:id', function(req,res){
-    const id=req.params.id;
+    // const id=req.params.id;
     res.render("addpage",
     {
-        nav,
         title:'Add new book',
         
     }

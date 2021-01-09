@@ -15,10 +15,10 @@ signupRouter.get('/', function(req,res){
 });
 signupRouter.get('/:id', function(req,res){
     const id=req.params.id;
-    res.render("addpage",
+    res.render("login",
     {
         nav,
-        title:'Add new book',
+        title:'Log In',
         
     }
     );//passed as object

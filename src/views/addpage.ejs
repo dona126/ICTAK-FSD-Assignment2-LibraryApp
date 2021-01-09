@@ -54,8 +54,8 @@
   </div><!-- /cont -->
  
 <hr>
-<form>
-  <div class="form-group addbook">
+<form class="formClass one" action="/addpage/books"  onsubmit=" return titleValidation();">
+  
     <h1 class="myText">Enter details of the book to be added</h1>
     <br>
     <div class="form-group">
@@ -67,15 +67,22 @@
        <label id="error2"></label>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" id="genre" placeholder="Enter genre of the book">
+      <input type="text" class="form-control" id="life" placeholder="Enter life span of the author">
       <label id="error3"></label>
+   </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="genre" placeholder="Enter genre of the book">
+      <label id="error4"></label>
    </div>
     <label for="exampleFormControlFile1">Upload title page of the book</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
     <br>
+    <label for="exampleFormControlFile1">Upload photo of the author</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <br>
   <button id="logIn" type="submit" class="btn btn-primary btn-block ">Add the book</button>
   <br>
-</div>
+
 
 </form>
 
@@ -102,6 +109,7 @@
 </footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/addbook.js"></script>
 	</body>
 </html>

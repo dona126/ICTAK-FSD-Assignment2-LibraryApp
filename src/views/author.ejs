@@ -32,7 +32,8 @@
         <%for(i=0;i<nav.length; i++){%>
 
           <li>
-          
+            <%if(i==1){%>
+              <%i=i+1;}%> 
               <a href="<%=nav[i].link%>"><%=nav[i].name%></a> I
           
           </li>
