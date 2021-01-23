@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 //Database connection
 mongoose.connect("mongodb://localhost:27017/library");
 
-// mongoose.connect("mongodb+srv://userone:userone@libraryapp.5vzr3.mongodb.net/Library?retryWrites=true&w=majority")
+
 
 
 //Schema definition (used for both books and authors)
