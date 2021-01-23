@@ -10,21 +10,25 @@ const nav=[
 
 ];
 
-const port =process.env.PORT || 5007;
+const port =process.env.PORT || 5000;
 
 const booksRouter = require('./src/routes/bookRoutes')(nav);
 const authorsRouter = require('./src/routes/authorRoutes')(nav);
 const loginRouter = require('./src/routes/loginRoutes')(nav);
 const signupRouter = require('./src/routes/signupRoutes')(nav);
+const addpageRouter = require('./src/routes/addpageRoutes')(nav);
 // const addpageRouter = require('./src/routes/addpageRoutes');
 
 //route handlers
 const app = express();
+
+app.use(express.urlencoded({extended:true}));
+
 app.use('/books', booksRouter);
 app.use('/authors', authorsRouter);
 app.use('/login', loginRouter);
 app.use('/signup',signupRouter);
-// app.use('/addpage',addpageRouter);
+app.use('/addpage',addpageRouter);
 
 app.set('view engine', 'ejs'); 
 app.set('views', __dirname+'/src/views');

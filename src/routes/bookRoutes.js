@@ -1,30 +1,35 @@
 const express = require('express');
 const booksRouter = express.Router();
 
+const Bookdata=require('../model/bookAndAuthorData');
 function router(nav)
 { 
-var books=[
-    { 
-    title: 'Tom and Jerry',
-    author: 'Joseph Barbera', 
-    genre: 'Cartoon',
-    img:"tom.jpeg"
-    },
-    {
-    title: 'Harry Potter',
-    author: 'J K Rowling', 
-    genre: 'Fantasy', 
-    img: "harry.jpeg"
-    },
-    {    
-    title: 'Paathumayude Aadu',
-    author: 'Vaikom Muhammad Basheer',
-    genre: 'Drama',
-    img: "basheer.jpeg"
+// var books=[
+//     { 
+//     title: 'Tom and Jerry',
+//     author: 'Joseph Barbera', 
+//     genre: 'Cartoon',
+//     image1:"tom.jpeg"
+//     },
+//     {
+//     title: 'Harry Potter',
+//     author: 'J K Rowling', 
+//     genre: 'Fantasy', 
+//     image1: "harry.jpeg"
+//     },
+//     {    
+//     title: 'Paathumayude Aadu',
+//     author: 'Vaikom Muhammad Basheer',
+//     genre: 'Drama',
+//     image1: "basheer.jpeg"
         
-    }
-]
+//     }
+// ]
+
+
 booksRouter.get('/', function(req,res){
+ Bookdata.find()
+ .then(function(books){
     res.render("books",
     {
         nav,
@@ -32,17 +37,25 @@ booksRouter.get('/', function(req,res){
         books //books array
     }
     );//passed as object
+ })
 });
+
 booksRouter.get('/:id', function(req,res){
     const id=req.params.id;
-    res.render("book",
-    {
-        nav,
-        title:'Book',
-        book: books[id]
-    }
-    );//passed as object
-});
+
+    Bookdata.findOne({_id:id}) 
+    .then(function(book){
+        res.render('book', {
+        
+            nav,
+            title:'Book',
+            book
+        
+        }
+        );//passed as object
+     })
+    });
+    
 return booksRouter;
 }//fn router ends
 

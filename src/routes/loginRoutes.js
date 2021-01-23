@@ -13,7 +13,7 @@ loginRouter.get('/', function(req,res){
     }
     );//passed as object
 });
-loginRouter.get('/:id', function(req,res){
+loginRouter.get('/addpage', function(req,res){
     // const id=req.params.id;
     res.render("addpage",
     {
@@ -22,6 +22,10 @@ loginRouter.get('/:id', function(req,res){
     }
     );//passed as object
 });
+
+
+
+
 return loginRouter;
 }//fn router ends
 

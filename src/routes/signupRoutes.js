@@ -13,7 +13,7 @@ signupRouter.get('/', function(req,res){
     }
     );//passed as object
 });
-signupRouter.get('/:id', function(req,res){
+signupRouter.get('/login', function(req,res){
     const id=req.params.id;
     res.render("login",
     {

@@ -1,6 +1,6 @@
 
 
-let email=document.getElementById("email");
+    let email=document.getElementById("email");
     let pwd=document.getElementById("pwd");
     
     let error1=document.getElementById("error1");

@@ -203,3 +203,8 @@ a,a:hover {
   text-align: center;
 }
 
+/* button color */
+.color {
+  background-color: #003a44;
+  border-radius: 15px;
+}

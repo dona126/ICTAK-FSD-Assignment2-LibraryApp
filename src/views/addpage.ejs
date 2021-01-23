@@ -54,37 +54,46 @@
   </div><!-- /cont -->
  
 <hr>
-<form class="formClass one" action="/addpage/books"  onsubmit=" return titleValidation();">
+
+
+
+
+<div>
+  <form method ="POST" class="formClass one" action="/addpage/add"  onsubmit=" return titleValidation();">
   
     <h1 class="myText">Enter details of the book to be added</h1>
     <br>
     <div class="form-group">
-      <input type="text" class="form-control"  id="title"  placeholder="Enter title of the book">
+      <input type="text" class="form-control" name="title" id="title"  placeholder="Enter title of the book">
       <label  id="error1"></label>
     </div>
     <div class="form-group">
-       <input type="text" class="form-control" id="author" placeholder="Enter author of the book">
+       <input type="text" class="form-control" name="author" id="author" placeholder="Enter author of the book">
        <label id="error2"></label>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" id="life" placeholder="Enter life span of the author">
+      <input type="text" class="form-control" name="life" id="life" placeholder="Enter life span of the author">
       <label id="error3"></label>
    </div>
     <div class="form-group">
-      <input type="text" class="form-control" id="genre" placeholder="Enter genre of the book">
+      <input type="text" class="form-control" name="genre" id="genre" placeholder="Enter genre of the book">
       <label id="error4"></label>
    </div>
     <label for="exampleFormControlFile1">Upload title page of the book</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" name="image1" id="image1">
     <br>
     <label for="exampleFormControlFile1">Upload photo of the author</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" name="image2" id="image2">
     <br>
   <button id="logIn" type="submit" class="btn btn-primary btn-block ">Add the book</button>
   <br>
 
 
 </form>
+</div>
+
+
+
 
 
 <div  class="container" id="footer">
@@ -110,6 +119,8 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/addbook.js"></script>
+    <script src="/js/addpage.js"></script>
+    
+    
 	</body>
 </html>
